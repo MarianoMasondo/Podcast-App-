@@ -10,7 +10,7 @@ function css(done){
 }
 
 function dev(){
-    watch("src/scss/app.scss", css)
+    watch("src/scss/a**/*.scss", css)
 }
 exports.css = css;
 exports.dev = dev;
