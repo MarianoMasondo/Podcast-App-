@@ -11861,11 +11861,41 @@ textarea.form-control-lg {
   }
 }
 .site-header {
-  background-image: linear-gradient(transparentize #313c4e, 0.3% 0%, transparentize #313c4e, 0.3% 100%), url("../img/header.jpg");
+  background-image: linear-gradient(rgba(49, 60, 78, 0.7) 0%, rgba(49, 60, 78, 0.7) 100%), url("../img/header.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
 }
 .site-header .logo {
   max-width: 20rem;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .site-header .logo {
+    margin: 0;
+  }
+}
+.site-header .contenido {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
+@media (min-width: 768px) {
+  .site-header .contenido {
+    max-width: 50%;
+  }
+}
+@media (min-width: 992px) {
+  .site-header .contenido {
+    padding-top: 15rem;
+    padding-bottom: 10rem;
+  }
+}
+.site-header .contenido h1 {
+  font-size: 4.5rem;
+  color: white;
+}
+@media (min-width: 768px) {
+  .site-header .contenido h1 {
+    font-size: 6rem;
+  }
 }
