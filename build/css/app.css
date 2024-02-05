@@ -12104,3 +12104,17 @@ textarea.form-control-lg {
     font-size: 6rem;
   }
 }
+
+.crea-podcast h2 {
+  color: #313c4e;
+  display: inline-block;
+  margin-top: 5rem;
+}
+.crea-podcast h2::after {
+  content: "";
+  height: 1rem;
+  width: 100%;
+  background-color: #84d9bc;
+  display: block;
+  margin: -1.4rem 0 0 0;
+}
