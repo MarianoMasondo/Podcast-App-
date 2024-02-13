@@ -12153,3 +12153,22 @@ textarea.form-control-lg {
 .beneficios .imagen:hover {
   transform: rotate(8deg) scale(1.1);
 }
+
+.estadisticas h2 {
+  color: #313c4e;
+  display: inline-block;
+  margin-top: 5rem;
+}
+@media (min-width: 768px) {
+  .estadisticas h2 {
+    margin-top: 0;
+  }
+}
+.estadisticas h2::after {
+  content: "";
+  height: 1rem;
+  width: 100%;
+  background-color: #84d9bc;
+  display: block;
+  margin: -1.4rem 0 0 0;
+}
