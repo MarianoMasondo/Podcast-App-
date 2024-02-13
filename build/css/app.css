@@ -12254,3 +12254,41 @@ textarea.form-control-lg {
   background-position: 50% 2rem;
   background-repeat: no-repeat;
 }
+
+.heading-testimonial {
+  color: #313c4e;
+  display: inline-block;
+  margin-top: 5rem;
+}
+@media (min-width: 768px) {
+  .heading-testimonial {
+    margin-top: 0;
+  }
+}
+.heading-testimonial::after {
+  content: "";
+  height: 1rem;
+  width: 100%;
+  background-color: #84d9bc;
+  display: block;
+  margin: -1.4rem 0 0 0;
+}
+
+.testimonial {
+  border: 0.5rem solid #313c4e;
+  border-radius: 1rem;
+  font-size: 1.6rem;
+  padding: 2rem 2rem 2rem 6rem;
+  position: relative;
+}
+.testimonial::before {
+  content: "";
+  width: 5rem;
+  height: 5rem;
+  background-image: url(../img/comilla.svg);
+  background-size: 4rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: absolute;
+  left: 0.5rem;
+}
