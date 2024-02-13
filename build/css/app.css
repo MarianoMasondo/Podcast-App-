@@ -12029,7 +12029,7 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-.btn-header {
+.btn-header, .boton-plan {
   --bs-btn-color: #313c4e;
   --bs-btn-bg: #84d9bc;
   --bs-btn-border-color: transparent;
@@ -12055,13 +12055,22 @@ textarea.form-control-lg {
   margin-top: 1rem;
 }
 @media (min-width: 1200px) {
-  .btn-header {
+  .btn-header, .boton-plan {
     --bs-btn-font-size: 2rem;
   }
 }
 @media (min-width: 768px) {
-  .btn-header {
+  .btn-header, .boton-plan {
     display: inline-block;
+  }
+}
+
+.boton-plan {
+  border: 1px solid #fff;
+}
+@media (min-width: 768px) {
+  .boton-plan {
+    display: block;
   }
 }
 
@@ -12194,16 +12203,54 @@ textarea.form-control-lg {
 
 .plan {
   padding: 16rem 4rem 4rem 4rem;
+  border-bottom: 1px solid #e1e1e1;
+}
+@media (min-width: 768px) {
+  .plan {
+    border: none;
+    transition: transform 300ms ease;
+  }
+}
+@media (min-width: 768px) and (prefers-reduced-motion: reduce) {
+  .plan {
+    transition: none;
+  }
+}
+@media (min-width: 768px) {
+  .plan:hover {
+    transform: scale(1.1);
+  }
 }
 .plan .precio {
   font-size: 1.8rem;
   font-weight: 700;
   text-transform: uppercase;
 }
+.plan.inicio {
+  background-image: url("../img/icono_inicio.svg");
+  background-size: 10rem;
+  background-position: 50% 2rem;
+  background-repeat: no-repeat;
+}
+.plan.negocio {
+  background-image: url("../img/icono_negocio.svg");
+  background-size: 10rem;
+  background-position: 50% 2rem;
+  background-repeat: no-repeat;
+}
 @media (min-width: 768px) {
   .plan.negocio {
     margin-top: -5rem;
     margin-bottom: -5rem;
     border-radius: 2rem;
+    z-index: 100;
+    padding-top: calc(16rem + 5rem);
+    background-position-y: calc(2rem + 5rem);
   }
+}
+.plan.pro {
+  background-image: url("../img/icono_pro.svg");
+  background-size: 10rem;
+  background-position: 50% 2rem;
+  background-repeat: no-repeat;
 }
