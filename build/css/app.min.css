@@ -216,7 +216,9 @@ ul ul {
 }
 
 a {
-  color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));
+  color: #1d242f;
+  padding: 1rem;
+  background-color: #84d9bc;
   text-decoration: underline;
 }
 a:hover {
