@@ -6,38 +6,42 @@ const purgecss = require("gulp-purgecss");
 const rename = require("gulp-rename");
 
 //imagenes
-const imagemin = require('gulp-imagemin');
+const imagemin = require("gulp-imagemin");
 
-function css(done){
-    src("src/scss/app.scss") //identificar el archivo principal
+function css(done) {
+  src("src/scss/app.scss") //identificar el archivo principal
     .pipe(sass()) //compilar SASS
-    .pipe(dest("build/css")) //Exportarlo o guardarlo en una ubicación
+    .pipe(dest("build/css")); //Exportarlo o guardarlo en una ubicación
 
-    done();
+  done();
 }
 
-function cssbuild(done){
-    src('build/css/app.css')
-    .pipe(rename({
-        suffix: '.min'
-    }))
-    .pipe(purgecss({
-        content: ['index.html']
-    }))
-    .pipe(dest('build/css'))
+function cssbuild(done) {
+  src("build/css/app.css")
+    .pipe(
+      rename({
+        suffix: ".min",
+      })
+    )
+    .pipe(
+      purgecss({
+        content: ["index.html"],
+      })
+    )
+    .pipe(dest("build/css"));
 
-    done();
+  done();
 }
 
-function dev(){
-    watch("src/scss/**/*.scss", css)
+function dev() {
+  watch("src/scss/**/*.scss", css);
 }
 
 function imagenes(done) {
-    src('src/img/**/*')
-        .pipe(imagemin({optimizationLevel: 3}))
-        .pipe(dest('build/img'))
-    done();
+  src("src/img/**/*")
+    .pipe(imagemin({ optimizationLevel: 3 }))
+    .pipe(dest("build/img"));
+  done();
 }
 
 exports.css = css;
